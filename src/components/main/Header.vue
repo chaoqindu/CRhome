@@ -1,8 +1,12 @@
 <template>
   <div>
-    <el-carousel :interval="5000" arrow="always">
-      <el-carousel-item v-for="item in picPaths" :key="item">
-        <img :src="item">
+    <el-carousel :interval="5000" :height="height"  :type="type" arrow="always">
+      <el-carousel-item v-for="src in picPaths" :key="src">
+        <el-image :src="src">
+          <div slot="placeholder" class="image-slot">
+            加载中<span class="dot">...</span>
+          </div>
+        </el-image>
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -13,11 +17,13 @@ export default {
   name: "HelloWorld",
   data() {
     return {
+      height:"380px",
+      type:"card",
       picPaths:[
-        "../../assets/home/home01.jpeg",
-        "../../assets/home/home02.jpeg",
-        "../../assets/home/home03.jpeg",
-        "../../assets/home/home04.jpeg",
+        require("../../assets/home/home01.jpeg"),
+        require("../../assets/home/home02.jpeg"),
+        require("../../assets/home/home03.jpeg"),
+        require("../../assets/home/home04.jpeg")
       ] 
     };
   }

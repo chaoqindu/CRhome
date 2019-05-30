@@ -10,7 +10,20 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      "/baidu": {//以/proxy/为开头的适合这个规则
+        target: "http://image.baidu.com/",//目标地址
+        "secure": false,//false为http访问，true为https访问
+        "changeOrigin": true,//跨域访问设置，true代表跨域
+        "pathRewrite": {//路径改写规则
+          "^/baidu": ""//以/proxy/为开头的改写为''           
+        },
+        "headers": {//设置请求头伪装成手机端的访问
+          "Access-Control-Allow-Origin":"https://m.baidu.com,https://www.baidu.com,http://m.baidu.com,http://www.baidu.com",
+          "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

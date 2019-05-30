@@ -4,10 +4,7 @@
       <el-header>
         <cNavMenu></cNavMenu>
       </el-header>
-      <el-container>
-        <el-aside width="200px">
-          <cLeftMenu></cLeftMenu>
-        </el-aside>
+      <el-container>       
         <el-main>
           <cTabsMain></cTabsMain>
         </el-main>
@@ -39,6 +36,7 @@ export default {
     color: #333;
     text-align: center;
     line-height: 60px;
+    padding: 0;
   }
   
   .el-aside {

@@ -1,6 +1,6 @@
 <template> 
-    <div>
-      {{msg}}
+    <div class="cr-footer">
+      <div>{{msg}}</div>
     </div>
 </template>
 
@@ -9,7 +9,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '我是页面底部'
+      msg: '版权归杜朝钦所有（2019-2025）'
     }
   }
 }
@@ -17,4 +17,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .cr-footer{
+    height: 200px;
+    width: 100%;
+    background: #6666cc;
+  }
 </style>
