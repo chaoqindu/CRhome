@@ -16,10 +16,10 @@
       <el-menu-item index="2-3">娱乐影视</el-menu-item>      
     </el-submenu>
     <el-submenu index="3">
-      <template slot="title">充电站</template>
-      <el-menu-item index="3-1">Web开发</el-menu-item>
-      <el-menu-item index="3-2">数据与算法</el-menu-item>
-      <el-menu-item index="3-3">读书笔记</el-menu-item>  
+      <template slot="title"><router-link to="/study">充电站</router-link></template>
+      <el-menu-item index="3-1"><router-link to="/study/web">Web学习</router-link></el-menu-item>
+      <el-menu-item index="3-2"><router-link to="/study/ds">数据与算法</router-link></el-menu-item>
+      <el-menu-item index="3-3"><router-link to="/study/book">读书笔记</router-link></el-menu-item>  
     </el-submenu>    
     <el-submenu index="4">
       <template slot="title">喜爱的地方</template>

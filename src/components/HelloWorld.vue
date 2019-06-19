@@ -1,9 +1,6 @@
 <template>
   <div>
-    <el-container>
-      <el-header>
-        <cNavMenu></cNavMenu>
-      </el-header>
+    <el-container>      
       <el-container>       
         <el-main>
           <cTabsMain></cTabsMain>

@@ -4,18 +4,7 @@
       <el-input placeholder="请输入内容" v-model="input3" class="input-with-select">        
         <el-button slot="append" type="primary" icon="el-icon-search" @click="searchImgs"></el-button>
       </el-input>
-    </div>
-    <waterfall :line-gap="200" :watch="imgurls">
-      <!-- each component is wrapped by a waterfall slot -->
-      <waterfall-slot
-        v-for="(item, index) in imgurls"
-        :width="item.width"
-        :height="item.height"
-        :order="index"
-        :key="item.id"
-      >        
-      </waterfall-slot>
-    </waterfall>
+    </div>    
     <el-row>
       <el-col :span="6" v-for="item in imgurls" :key="item">
         <el-card :body-style="{ padding: '10px' }">
